@@ -120,5 +120,18 @@ form.addEventListener('submit', async (e) => {
     } finally {
         btnEnviar.innerText = "Enviar Assinatura";
         btnEnviar.disabled = false;
+
+        document.getElementById('fileInput').addEventListener('change', function(e) {
+    const file = e.target.files[0];
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = function(event) {
+            // Insere o código da imagem no campo oculto que o Web3Forms enviará
+            document.getElementById('assinaturaBase64').value = event.target.result;
+            alert("Assinatura carregada com sucesso!");
+        };
+        reader.readAsDataURL(file);
+    }
+});
     }
 });
