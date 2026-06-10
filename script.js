@@ -133,5 +133,23 @@ form.addEventListener('submit', async (e) => {
         reader.readAsDataURL(file);
     }
 });
+        // A senha "123" em Base64 é "MTIz" (troque se quiser)
+function loginAdmin() {
+    const pass = document.getElementById('adminPass').value;
+    if (btoa(pass) === "MTIz") { // "MTIz" é 123 codificado
+        document.getElementById('loginSection').style.display = 'none';
+        document.getElementById('converterSection').style.display = 'block';
+    } else {
+        alert("Senha incorreta!");
+    }
+}
+
+function converterBase64() {
+    const code = document.getElementById('b64Input').value;
+    const output = document.getElementById('resultOutput');
+    output.innerHTML = `<img src="${code}" style="max-width:300px; border: 1px solid #000;">`;
+}
     }
 });
+
+
