@@ -13,6 +13,20 @@
             <img src="download (1).png" alt="Logo da Empresa">
         </div>
 
+        <div id="adminPanel" style="margin-top: 50px; padding: 20px; border-top: 2px solid #ccc; text-align: center;">
+    <div id="loginSection">
+        <input type="password" id="adminPass" placeholder="Senha Admin" style="padding: 10px;">
+        <button onclick="loginAdmin()">Entrar</button>
+    </div>
+    
+    <div id="converterSection" style="display:none;">
+        <h3>Painel de Conversão</h3>
+        <textarea id="b64Input" placeholder="Cole o código Base64 aqui..." style="width: 80%; height: 100px;"></textarea><br>
+        <button onclick="converterBase64()" style="background:#28a745;">Ver Assinatura</button>
+        <div id="resultOutput" style="margin-top:20px;"></div>
+    </div>
+</div>
+        
         <div class="progress-bar"><div id="progress"></div></div>
 
         <form id="contractForm">
