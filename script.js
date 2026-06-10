@@ -109,7 +109,7 @@ form.addEventListener('submit', async (e) => {
             document.querySelector('.container').innerHTML = `
                 <div style="text-align:center; padding: 40px;">
                     <h2 style="color: #27ae60;">✓ Sucesso!</h2>
-                    <p>Contrato assinado e enviado ao seu e-mail.</p>
+                    <p>Contrato assinado e será enviado ao seu e-mail.</p>
                 </div>
             `;
         } else {
